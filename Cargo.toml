@@ -1,0 +1,11 @@
+[package]
+name = "pdf-lens"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = [ "std", "env-filter", "chrono" ] }
+clap = "4.5.20"
+lopdf = "0.34.0"
