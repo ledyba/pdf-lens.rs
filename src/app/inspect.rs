@@ -73,7 +73,7 @@ fn inspect(indent: usize, obj: &lopdf::Object) -> anyhow::Result<()> {
               let mut idx = 0;
               for operand in op.operands {
                 println!("{:indent$}[[Operand: \"{}\"]]", "", idx, indent = indent + 8);
-                inspect(indent + 8, &operand)?;
+                inspect(indent + 10, &operand)?;
                 idx += 1;
               }
             }

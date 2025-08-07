@@ -9,7 +9,9 @@ cargo build
 % .\target\debug\pdf-lens.exe inspect .\sample\sample.pdf
 ```
 
-Result:
+### Result
+
+See [sample](.\sample\sample.pdf).
 
 ```
 [[Doc Info]]
@@ -69,36 +71,36 @@ Result:
       <<Content (len=9)>>
         [[Op: "J" (len=1)]]
           [[Operand: "0"]]
-          <<Integer: 0>>
+            <<Integer: 0>>
         [[Op: "j" (len=1)]]
           [[Operand: "0"]]
-          <<Integer: 0>>
+            <<Integer: 0>>
         [[Op: "w" (len=1)]]
           [[Operand: "0"]]
-          <<Real: 0.57>>
+            <<Real: 0.57>>
         [[Op: "G" (len=1)]]
           [[Operand: "0"]]
-          <<Real: 0>>
+            <<Real: 0>>
         [[Op: "g" (len=1)]]
           [[Operand: "0"]]
-          <<Real: 0>>
+            <<Real: 0>>
         [[Op: "q" (len=0)]]
         [[Op: "cm" (len=6)]]
           [[Operand: "0"]]
-          <<Real: 566.92914>>
+            <<Real: 566.92914>>
           [[Operand: "1"]]
-          <<Integer: 0>>
+            <<Integer: 0>>
           [[Operand: "2"]]
-          <<Integer: 0>>
+            <<Integer: 0>>
           [[Operand: "3"]]
-          <<Real: 425.19684>>
+            <<Real: 425.19684>>
           [[Operand: "4"]]
-          <<Real: 14.17543>>
+            <<Real: 14.17543>>
           [[Operand: "5"]]
-          <<Real: 208.34657>>
+            <<Real: 208.34657>>
         [[Op: "Do" (len=1)]]
           [[Operand: "0"]]
-          <<Name: "I869fc61fd60fa42f82f2af6ec00eddbd7121aa6d">>
+            <<Name: "I869fc61fd60fa42f82f2af6ec00eddbd7121aa6d">>
         [[Op: "Q" (len=0)]]
 [[Object: (5 0)]]
   <<Stream>>
