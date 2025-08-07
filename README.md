@@ -1,6 +1,6 @@
 # pdf-lens.rs
 
-Command line tool to inspect a structure of PDF file.
+A command-line tool for inspecting the structure of PDF files.
 
 ## Usage
 
