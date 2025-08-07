@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0.93"
-tracing = "0.1.40"
-tracing-subscriber = { version = "0.3.18", features = [ "std", "env-filter", "chrono" ] }
-clap = "4.5.20"
-lopdf = "0.34.0"
+anyhow = "1.0.98"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = [ "std", "env-filter", "chrono" ] }
+clap = "4.5.23"
+lopdf = "0.36.0"
