@@ -2,6 +2,11 @@
 name = "pdf-lens"
 version = "0.1.0"
 edition = "2024"
+authors = ["Kaede Fujisaki"]
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/ledyba/pdf-lens.rs"
+keywords = ["pdf"]
 
 [dependencies]
 anyhow = "1.0.98"
