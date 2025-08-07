@@ -3,15 +3,13 @@ mod app;
 use std::path::PathBuf;
 use anyhow::anyhow;
 use clap::Command;
-use lopdf::content::Content;
-use lopdf::Object;
 
 fn app() -> clap::Command {
   use clap::{Arg, ArgAction, value_parser};
-  clap::Command::new("pittari")
-    .bin_name("pittari")
+  clap::Command::new("pdf-lens")
+    .bin_name("pdf-lens")
     .author("Kaede Fujisaki")
-    .about("ぴったり印刷くん")
+    .about("PDF Inspector")
     .version("0.1.0")
     .arg(Arg::new("verbose")
       .long("verbose")
