@@ -67,7 +67,8 @@ fn inspect(indent: usize, obj: &lopdf::Object) -> anyhow::Result<()> {
         };
         match Content::decode(&bytes) {
           Ok(content) => {
-            if content.operations.is_empty() {
+            if content.operations.is_empty() && bytes.len() > 0 {
+              // FIXME: How can I handle content correctly?
               println!("{:indent$}<<Blob (bytes={})>>", "", bytes.len(), indent = indent + 4);
             } else {
               println!("{:indent$}<<Content (ops={})>>", "", content.operations.len(), indent = indent + 4);
