@@ -67,19 +67,23 @@ fn inspect(indent: usize, obj: &lopdf::Object) -> anyhow::Result<()> {
         };
         match Content::decode(&bytes) {
           Ok(content) => {
-            println!("{:indent$}<<Content (len={})>>", "", content.operations.len(), indent = indent + 4);
-            for op in content.operations {
-              println!("{:indent$}[[Op: \"{}\" (len={})]]", "", &op.operator, op.operands.len(), indent = indent + 6);
-              let mut idx = 0;
-              for operand in op.operands {
-                println!("{:indent$}[[Operand: \"{}\"]]", "", idx, indent = indent + 8);
-                inspect(indent + 10, &operand)?;
-                idx += 1;
+            if content.operations.is_empty() {
+              println!("{:indent$}<<Blob (bytes={})>>", "", bytes.len(), indent = indent + 4);
+            } else {
+              println!("{:indent$}<<Content (ops={})>>", "", content.operations.len(), indent = indent + 4);
+              for op in content.operations {
+                println!("{:indent$}[[Op: \"{}\" (len={})]]", "", &op.operator, op.operands.len(), indent = indent + 6);
+                let mut idx = 0;
+                for operand in op.operands {
+                  println!("{:indent$}[[Operand: \"{}\"]]", "", idx, indent = indent + 8);
+                  inspect(indent + 10, &operand)?;
+                  idx += 1;
+                }
               }
             }
           },
-          Err(err) => {
-            println!("{:indent$}[err] Failed to decode: {:?}", "", err, indent = indent + 4);
+          Err(_) => {
+            println!("{:indent$}<<Blob (bytes={})>>", "", bytes.len(), indent = indent + 4);
           }
         }
       }
